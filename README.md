@@ -47,3 +47,65 @@
 |setInputListener()|设置输入回调监听|
 |getInputInfo()|获取全部输入的内容|
 |clearInputInfo()|清除全部输入内容|
+
+
+
+# 使用`JitPack`的方式, 引入库.
+
+## 根目录中的 `build.gradle`
+
+```java
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+## APP目录中的 `build.gradle`
+
+```java
+dependencies {
+    implementation 'com.github.WWGsky:OneByOneLayout:1.0.0'
+}
+```
+
+# 使用
+## xml设置属性
+>这里用到的一些资源文件在代码中都能找到,开发者可根据需求自定义
+```html
+<com.wwg.onebyoneinputlayout.OneByOneInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerInParent="true"
+        android:background="#ff8080"
+        android:padding="10dp"
+        app:inputNum="6"
+        app:inputWidth="36dp"
+        app:inputHeight="36dp"
+        app:inputMaxLength="1"
+        app:inputBackGround="@drawable/selector_app_theme_ed_focus_change"
+        app:inputCursorDrawable="@drawable/app_theme_ed_cursor_round"/>
+```
+## 代码中设置
+>在此仅为使用示例,具体以需求为准
+```java
+OneByOneInputLayout inputLayout = findViewById(R.id.inputLayout);
+inputLayout.getConfig().setInputType(InputType.TYPE_NUMBER_VARIATION_PASSWORD | InputType.TYPE_CLASS_NUMBER);
+```
+## 设置输入监听
+```java
+OneByOneInputLayout inputLayout = findViewById(R.id.inputLayout);
+
+//设置输入监听
+inputLayout.setInputListener(new OneByOneInputListener() {
+    @Override
+    public void getInputInfo(String info) {
+
+        Toast.makeText(MainActivity.this, "输入信息 --> " + info, Toast.LENGTH_SHORT).show();
+    }
+});
+```
