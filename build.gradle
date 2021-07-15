@@ -9,6 +9,9 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        //注意，添加的 JitPack 版本是根据 Gradle版本而定的，具体查看文档
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
     }
 }
 
@@ -16,6 +19,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //配置 JitPack 插件的仓库地址
+        maven { url "https://jitpack.io" }
     }
 }
 
