@@ -97,6 +97,7 @@ OneByOneInputLayout inputLayout = findViewById(R.id.inputLayout);
 inputLayout.getConfig().setInputType(InputType.TYPE_NUMBER_VARIATION_PASSWORD | InputType.TYPE_CLASS_NUMBER);
 ```
 ## 设置输入监听
+>只有设置了输入监听后,才会绘制哦!!!!
 ```java
 OneByOneInputLayout inputLayout = findViewById(R.id.inputLayout);
 
