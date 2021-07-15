@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OneByOneInputLayout">
+
+        <attr name="inputNum" format="integer" min="1"/>
+        <attr name="inputWidth" format="dimension"/>
+        <attr name="inputHeight" format="dimension"/>
+        <attr name="inputMaxLength" format="integer" min="1"/>
+        <attr name="inputBackGround" format="reference|color"/>
+        <attr name="inputCursorDrawable" format="reference"/>
+
+    </declare-styleable>
+
+</resources>

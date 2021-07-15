@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.wwg.onebyoneinputlayout.OneByOneInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerInParent="true"
+        android:background="#ff8080"
+        android:padding="10dp"
+        app:inputNum="6"
+        app:inputWidth="36dp"
+        app:inputHeight="36dp"
+        app:inputMaxLength="1"
+        app:inputBackGround="@drawable/selector_app_theme_ed_focus_change"
+        app:inputCursorDrawable="@drawable/app_theme_ed_cursor_round"/>
+
+</RelativeLayout>

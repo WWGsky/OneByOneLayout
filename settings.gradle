@@ -1,0 +1,3 @@
+include ':OneByOneInputLayout'
+include ':app'
+rootProject.name = "OneByOneInput"
